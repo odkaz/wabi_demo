@@ -1,28 +1,41 @@
-<style>
-  .container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    min-height: 800px;
-    /* padding-bottom: 200%; */
-  }
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Manage Reservation</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  .responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-  }
+    <style>
+      .container {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        min-height: 1200px;
+        /* padding-bottom: 200%; */
+      }
 
-  iframe.responsive-iframe[src*="maps"] {
-    width: 100% !important;
-    height: 700px;
-  }
-</style>
+      .responsive-iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+      }
 
-<div class="container">
-    <iframe class="responsive-iframe" style="border:none;" width="500px" height="500px" src="https://script.google.com/macros/s/AKfycbwc-Iv_AxpWb0LWHDgcG5Xep9vPfmCDOvsgI_0lrSOZwRtFPceMWy7va6YuFdInowmk/exec"></iframe>
-</div>
+      iframe.responsive-iframe[src*="maps"] {
+        width: 100% !important;
+        height: 700px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <iframe class="responsive-iframe" style="border:none;" width="500px" height="500px" src="https://script.google.com/macros/s/AKfycbz7TsohRcWB1y5zv8NHIgDK5PKVdb1LR9_hw1KTPoSgn0XBOLZd2l6SjWwh1OknVRdV/exec"></iframe>
+    </div>
+  </body>
+</html>
+
+
