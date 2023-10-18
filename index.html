@@ -1,0 +1,28 @@
+<style>
+  .container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 800px;
+    /* padding-bottom: 200%; */
+  }
+
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  iframe.responsive-iframe[src*="maps"] {
+    width: 100% !important;
+    height: 700px;
+  }
+</style>
+
+<div class="container">
+    <iframe class="responsive-iframe" style="border:none;" width="500px" height="500px" src="https://script.google.com/macros/s/AKfycbwc-Iv_AxpWb0LWHDgcG5Xep9vPfmCDOvsgI_0lrSOZwRtFPceMWy7va6YuFdInowmk/exec"></iframe>
+</div>
