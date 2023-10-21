@@ -24,11 +24,43 @@
         width: 100%;
         height: 100%;
       }
+
+      [style*="--aspect-ratio"] > :first-child {
+        width: 100%;
+      }
+      [style*="--aspect-ratio"] > img {
+        height: auto;
+      }
+      @supports (--custom:property) {
+        [style*="--aspect-ratio"] {
+          position: relative;
+        }
+        [style*="--aspect-ratio"]::before {
+          content: "";
+          display: block;
+          padding-bottom: calc(100% / (var(--aspect-ratio)));
+        }
+        [style*="--aspect-ratio"] > :first-child {
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+        }
+      }
     </style>
   </head>
   <body>
-    <div class="container" styel="overflow: scroll; -webkit-overflow-scrolling: touch; width: 300px;">
+    <!-- <div class="container" styel="overflow: scroll; -webkit-overflow-scrolling: touch; width: 300px;">
       <iframe class="responsive-iframe" style="border:none;" width="500px" height="500px" src="https://script.google.com/macros/s/AKfycbz7TsohRcWB1y5zv8NHIgDK5PKVdb1LR9_hw1KTPoSgn0XBOLZd2l6SjWwh1OknVRdV/exec"></iframe>
+    </div> -->
+    <div style="--aspect-ratio: 9/16;">
+      <iframe
+        src="https://script.google.com/macros/s/AKfycbz7TsohRcWB1y5zv8NHIgDK5PKVdb1LR9_hw1KTPoSgn0XBOLZd2l6SjWwh1OknVRdV/exec"
+        width="900"
+        height="1600"
+        frameborder="0"
+      >
+      </iframe>
     </div>
   </body>
 </html>
